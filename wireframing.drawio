@@ -1,1 +1,161 @@
-<mxfile host="app.diagrams.net" modified="2022-03-06T02:40:07.635Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.3 Safari/605.1.15" version="16.6.4" etag="QQMuAcsyxSgKBgKj2wvm" type="github"><diagram id="7Y9GmNgVDP8SF2NrLYEP">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-03-06T03:10:48.966Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.3 Safari/605.1.15" etag="nepIu8mYm7vHCosfzMeq" version="16.6.4" type="github">
+  <diagram id="7Y9GmNgVDP8SF2NrLYEP" name="Page Frame">
+    <mxGraphModel dx="2714" dy="3214" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-25" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-280" y="-40" width="1080" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-4" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="110" y="240" width="120" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-11" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="80" y="200" width="640" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-20" value="" style="group" vertex="1" connectable="0" parent="YjzwFa3_-ySRGBe-iUuc-11">
+          <mxGeometry x="60" y="60" width="60" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-13" value="Page" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="YjzwFa3_-ySRGBe-iUuc-20">
+          <mxGeometry width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-14" value="Page" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="YjzwFa3_-ySRGBe-iUuc-20">
+          <mxGeometry y="40" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-15" value="Page" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="YjzwFa3_-ySRGBe-iUuc-20">
+          <mxGeometry y="80" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-16" value="Page" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="YjzwFa3_-ySRGBe-iUuc-20">
+          <mxGeometry y="120" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-17" value="Page" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="YjzwFa3_-ySRGBe-iUuc-20">
+          <mxGeometry y="160" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-18" value="Page" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="YjzwFa3_-ySRGBe-iUuc-20">
+          <mxGeometry y="200" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-19" value="Page" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="YjzwFa3_-ySRGBe-iUuc-20">
+          <mxGeometry y="240" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-21" value="" style="group" vertex="1" connectable="0" parent="YjzwFa3_-ySRGBe-iUuc-11">
+          <mxGeometry width="640" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="YjzwFa3_-ySRGBe-iUuc-21">
+          <mxGeometry width="640" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=default;" vertex="1" parent="YjzwFa3_-ySRGBe-iUuc-21">
+          <mxGeometry x="20" y="15" width="600" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-5" value="&lt;h1&gt;User Info&lt;/h1&gt;&lt;div&gt;denoted as a blue bar, user info will be user name, icon, Page title.&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="250" y="-20" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-9" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="YjzwFa3_-ySRGBe-iUuc-5" target="YjzwFa3_-ySRGBe-iUuc-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="480" as="sourcePoint" />
+            <mxPoint x="310" y="430" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="350" y="170" />
+              <mxPoint x="460" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-10" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="240" y="230" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-3" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="YjzwFa3_-ySRGBe-iUuc-10">
+          <mxGeometry width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-6" value="" style="rhombus;whiteSpace=wrap;html=1;strokeColor=default;fillColor=none;" vertex="1" parent="YjzwFa3_-ySRGBe-iUuc-10">
+          <mxGeometry x="420" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-7" value="Snowmang" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="YjzwFa3_-ySRGBe-iUuc-10">
+          <mxGeometry x="340" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-8" value="----------------- Page title -----------------" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="YjzwFa3_-ySRGBe-iUuc-10">
+          <mxGeometry x="120" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-12" value="&lt;h1&gt;Nav&lt;/h1&gt;&lt;div&gt;Denoted as a green bar. This will serve as a navigation bar to get anywhere in the website. Each page will have a unique title.&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-230" y="240" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-24" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="YjzwFa3_-ySRGBe-iUuc-12" target="YjzwFa3_-ySRGBe-iUuc-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="90" y="490" as="sourcePoint" />
+            <mxPoint x="30" y="450" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="20" y="320" />
+              <mxPoint x="20" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-27" value="&lt;span style=&quot;font-size: 30px&quot;&gt;User Loged in&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="165" y="-130" width="190" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-42" value="" style="group;editable=0;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="80" y="1400" width="640" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-29" value="" style="group;editable=0;" vertex="1" connectable="0" parent="YjzwFa3_-ySRGBe-iUuc-42">
+          <mxGeometry width="640" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-38" value="" style="group;editable=0;" vertex="1" connectable="0" parent="YjzwFa3_-ySRGBe-iUuc-29">
+          <mxGeometry width="640" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-39" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;editable=0;" vertex="1" parent="YjzwFa3_-ySRGBe-iUuc-38">
+          <mxGeometry width="640" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-41" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=30;strokeColor=default;fillColor=none;editable=0;" vertex="1" parent="YjzwFa3_-ySRGBe-iUuc-42">
+          <mxGeometry x="20" y="20" width="600" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-49" value="" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=30;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="YjzwFa3_-ySRGBe-iUuc-42">
+          <mxGeometry x="30" y="50" width="120" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-44" value="" style="group" vertex="1" connectable="0" parent="YjzwFa3_-ySRGBe-iUuc-42">
+          <mxGeometry x="160" y="40" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-45" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="YjzwFa3_-ySRGBe-iUuc-44">
+          <mxGeometry width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-47" value="Login" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="YjzwFa3_-ySRGBe-iUuc-44">
+          <mxGeometry x="340" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-48" value="----------------- Page title -----------------" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="YjzwFa3_-ySRGBe-iUuc-44">
+          <mxGeometry x="120" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-50" value="?" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=30;" vertex="1" parent="YjzwFa3_-ySRGBe-iUuc-44">
+          <mxGeometry x="420" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-54" value="&lt;h1&gt;User Info&lt;/h1&gt;&lt;div&gt;denoted as a blue bar. consisting of login button that will take you to login form. question mark instead of icon.&amp;nbsp;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="1210" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-55" value="" style="curved=1;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="YjzwFa3_-ySRGBe-iUuc-54" target="YjzwFa3_-ySRGBe-iUuc-48">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="1550" as="sourcePoint" />
+            <mxPoint x="440" y="1500" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="430" y="1380" />
+              <mxPoint x="500" y="1370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-56" value="&lt;h1&gt;Nav&lt;/h1&gt;&lt;div&gt;Denoted as a green bar. This will serve as a navigation bar to get anywhere in the website. Each page will have a unique title.&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-200" y="1480" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-57" value="" style="curved=1;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="YjzwFa3_-ySRGBe-iUuc-56" target="YjzwFa3_-ySRGBe-iUuc-49">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="1660" as="sourcePoint" />
+            <mxPoint x="260" y="1610" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="20" y="1650" />
+              <mxPoint x="20" y="1570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-58" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-320" y="1160" width="1080" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="YjzwFa3_-ySRGBe-iUuc-59" value="&lt;span style=&quot;font-size: 30px&quot;&gt;User Loged out&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="125" y="1070" width="235" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
