@@ -362,7 +362,7 @@
 									"font": "Arial;13;0",
 									"showShadow": false,
 									"left": 527,
-									"top": 449,
+									"top": 481,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -383,7 +383,7 @@
 									"font": "Arial;13;0",
 									"showShadow": false,
 									"left": 473,
-									"top": 437,
+									"top": 469,
 									"width": 82.37353515625,
 									"height": 13,
 									"alpha": 0.2644883299815112,
@@ -427,7 +427,7 @@
 								"$ref": "AAAAAAF/XCTF3jjXUZk="
 							},
 							"lineStyle": 2,
-							"points": "466:456;512:456;512:688",
+							"points": "466:488;512:488;512:688",
 							"nameLabel": {
 								"$ref": "AAAAAAF/XCg9iDkyauw="
 							},
@@ -735,25 +735,6 @@
 									"subViews": [
 										{
 											"_type": "ERDColumnView",
-											"_id": "AAAAAAF/XDsb3DoW9o8=",
-											"_parent": {
-												"$ref": "AAAAAAF/XDr7sToKNnw="
-											},
-											"model": {
-												"$ref": "AAAAAAF/XDsbyToTwKw="
-											},
-											"lineColor": "#ffffff",
-											"fillColor": "#ff74ce",
-											"fontColor": "#ffffff",
-											"font": "Arial;13;0",
-											"showShadow": false,
-											"left": 829,
-											"top": 508,
-											"width": 172.40087890625,
-											"height": 13
-										},
-										{
-											"_type": "ERDColumnView",
 											"_id": "AAAAAAF/XDtEIzod8iw=",
 											"_parent": {
 												"$ref": "AAAAAAF/XDr7sToKNnw="
@@ -767,7 +748,7 @@
 											"font": "Arial;13;0",
 											"showShadow": false,
 											"left": 829,
-											"top": 523,
+											"top": 508,
 											"width": 172.40087890625,
 											"height": 13
 										},
@@ -786,7 +767,7 @@
 											"font": "Arial;13;0",
 											"showShadow": false,
 											"left": 829,
-											"top": 538,
+											"top": 523,
 											"width": 172.40087890625,
 											"height": 13
 										}
@@ -799,7 +780,7 @@
 									"left": 824,
 									"top": 503,
 									"width": 182.40087890625,
-									"height": 53
+									"height": 38
 								}
 							],
 							"lineColor": "#ffffff",
@@ -810,7 +791,7 @@
 							"left": 824,
 							"top": 480,
 							"width": 182.40087890625,
-							"height": 76,
+							"height": 61,
 							"nameLabel": {
 								"$ref": "AAAAAAF/XDr7sToJU8U="
 							},
@@ -839,7 +820,7 @@
 									"fontColor": "#ffffff",
 									"font": "Arial;13;0",
 									"showShadow": false,
-									"left": 855,
+									"left": 863,
 									"top": 312,
 									"width": 48.419921875,
 									"height": 13,
@@ -883,7 +864,7 @@
 									"fontColor": "#ffffff",
 									"font": "Arial;13;0",
 									"showShadow": false,
-									"left": 927,
+									"left": 935,
 									"top": 448,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -905,7 +886,7 @@
 								"$ref": "AAAAAAF/XDdZJznOhF0="
 							},
 							"lineStyle": 2,
-							"points": "749:296;912:296;912:480",
+							"points": "749:296;920:296;920:480",
 							"nameLabel": {
 								"$ref": "AAAAAAF/XDwmNTo4DtU="
 							},
@@ -971,7 +952,7 @@
 								"$ref": "AAAAAAF/XD6aSzpeePw="
 							},
 							"lineStyle": 1,
-							"points": "995:248;925:479"
+							"points": "995:248;924:479"
 						},
 						{
 							"_type": "ERDEntityView",
@@ -1028,25 +1009,6 @@
 											"top": 773,
 											"width": 165.4619140625,
 											"height": 14
-										},
-										{
-											"_type": "ERDColumnView",
-											"_id": "AAAAAAF/XE3a9jsN2Fk=",
-											"_parent": {
-												"$ref": "AAAAAAF/XEjiTzqA1X4="
-											},
-											"model": {
-												"$ref": "AAAAAAF/XE3a4jsKTac="
-											},
-											"lineColor": "#ffffff",
-											"fillColor": "#ff74ce",
-											"fontColor": "#ffffff",
-											"font": "Arial;14;0",
-											"showShadow": false,
-											"left": 893,
-											"top": 789,
-											"width": 165.4619140625,
-											"height": 14
 										}
 									],
 									"lineColor": "#ffffff",
@@ -1057,7 +1019,7 @@
 									"left": 888,
 									"top": 768,
 									"width": 175.4619140625,
-									"height": 40
+									"height": 24
 								}
 							],
 							"lineColor": "#ffffff",
@@ -1068,7 +1030,7 @@
 							"left": 888,
 							"top": 744,
 							"width": 175.4619140625,
-							"height": 64,
+							"height": 49,
 							"nameLabel": {
 								"$ref": "AAAAAAF/XEjiTzp/JNQ="
 							},
@@ -1099,7 +1061,7 @@
 									"font": "Arial;14;0",
 									"showShadow": false,
 									"left": 905,
-									"top": 641,
+									"top": 634,
 									"height": 14,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -1141,7 +1103,7 @@
 									"font": "Arial;14;0",
 									"showShadow": false,
 									"left": 905,
-									"top": 573,
+									"top": 558,
 									"height": 14,
 									"alpha": -0.5235987755982988,
 									"distance": 30,
@@ -1162,7 +1124,7 @@
 								"$ref": "AAAAAAF/XEjiTzp+l2g="
 							},
 							"lineStyle": 2,
-							"points": "920:744;920:555",
+							"points": "920:744;920:540",
 							"nameLabel": {
 								"$ref": "AAAAAAF/XEmqQTqWCu8="
 							},
@@ -1196,7 +1158,7 @@
 									"font": "Arial;14;0",
 									"showShadow": false,
 									"left": 720,
-									"top": 584,
+									"top": 588,
 									"width": 79.3583984375,
 									"height": 14,
 									"alpha": 1.5707963267948966,
@@ -1217,8 +1179,8 @@
 									"fontColor": "#ffffff",
 									"font": "Arial;14;0",
 									"showShadow": false,
-									"left": 473,
-									"top": 412,
+									"left": 474,
+									"top": 415,
 									"width": 37.3447265625,
 									"height": 14,
 									"alpha": 0.5235987755982988,
@@ -1240,7 +1202,7 @@
 									"font": "Arial;14;0",
 									"showShadow": false,
 									"left": 861,
-									"top": 749,
+									"top": 746,
 									"height": 14,
 									"alpha": -0.5235987755982988,
 									"distance": 30,
@@ -1261,7 +1223,7 @@
 								"$ref": "AAAAAAF/XCTF3jjXUZk="
 							},
 							"lineStyle": 3,
-							"points": "467:436;744:416;744:768;887:772",
+							"points": "467:439;744:424;744:768;887:768",
 							"nameLabel": {
 								"$ref": "AAAAAAF/XEvWfjrWiCo="
 							},
@@ -1290,8 +1252,7 @@
 							},
 							"name": "Name",
 							"type": "String",
-							"length": "64",
-							"foreignKey": true
+							"length": "64"
 						},
 						{
 							"_type": "ERDColumn",
@@ -1426,7 +1387,8 @@
 								},
 								"reference": {
 									"$ref": "AAAAAAF/XDdZJjnM+fE="
-								}
+								},
+								"cardinality": "0..1"
 							}
 						},
 						{
@@ -1467,7 +1429,8 @@
 							},
 							"name": "Name",
 							"type": "String",
-							"length": "64"
+							"length": "64",
+							"unique": true
 						},
 						{
 							"_type": "ERDColumn",
@@ -1477,7 +1440,8 @@
 							},
 							"name": "Group_id",
 							"type": "u32",
-							"length": 0
+							"length": 0,
+							"nullable": true
 						},
 						{
 							"_type": "ERDColumn",
@@ -1488,7 +1452,10 @@
 							"name": "Posted_Recipe",
 							"type": "String",
 							"length": "64",
-							"foreignKey": true
+							"foreignKey": true,
+							"referenceTo": {
+								"$ref": "AAAAAAF/XBmM1ThxFt8="
+							}
 						},
 						{
 							"_type": "ERDColumn",
@@ -1498,7 +1465,10 @@
 							},
 							"name": "Saved_Recipe",
 							"type": "String",
-							"length": "64"
+							"length": "64",
+							"referenceTo": {
+								"$ref": "AAAAAAF/XBmM1ThxFt8="
+							}
 						},
 						{
 							"_type": "ERDColumn",
@@ -1576,7 +1546,7 @@
 								"reference": {
 									"$ref": "AAAAAAF/XDr7sToGiDk="
 								},
-								"cardinality": "0..*"
+								"cardinality": "1..*"
 							}
 						}
 					],
@@ -1612,17 +1582,6 @@
 					},
 					"name": "Food_Item",
 					"columns": [
-						{
-							"_type": "ERDColumn",
-							"_id": "AAAAAAF/XDsbyToTwKw=",
-							"_parent": {
-								"$ref": "AAAAAAF/XDr7sToGiDk="
-							},
-							"name": "Food_Name",
-							"type": "String",
-							"length": "64",
-							"foreignKey": true
-						},
 						{
 							"_type": "ERDColumn",
 							"_id": "AAAAAAF/XDtEHToaHKI=",
@@ -1690,16 +1649,6 @@
 								"$ref": "AAAAAAF/XEjiTjp8z7U="
 							},
 							"name": "Food_Name",
-							"type": "String",
-							"length": "64"
-						},
-						{
-							"_type": "ERDColumn",
-							"_id": "AAAAAAF/XE3a4jsKTac=",
-							"_parent": {
-								"$ref": "AAAAAAF/XEjiTjp8z7U="
-							},
-							"name": "Name",
 							"type": "String",
 							"length": "64"
 						}
