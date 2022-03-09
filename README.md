@@ -1,7 +1,7 @@
-# Method for making proposal
+# Culinary Ocean
 
-## Idea
-- food related website.
+## Core attributes
+- recipe database, cookbook social network.
 - individual accounts for each person.
 - family/friend groups.
 - data: recipes, profiles, food pantry.
@@ -15,6 +15,23 @@
 - try to use rust wasm to replace Vue.js completely
 
 ## Diagrams
-- Model DB in StarUML
-- Wireframe website using draw.io
+<p style="text-align: center;">database model using StarUML</p>
+
+![Model DB in StarUML](models/pre_db_model.png)
+<p style="text-align: center;">Wireframe website using draw.io</p>
+
+![Wireframing front page](models/wireframing.png)
 - ~Model rust wasm in StarUML
+
+## Idea
+### Phase 1
+- A website consisting of users.
+- users can post a recipe.
+- a recipe will consist of list of ingredients, and cooking process.
+- This will need a database that will persist users, and the recipes.
+### Phase 2
+- users can separate themselves by viewable groups(friends, family)
+- users will be able to add a picture to there recipes.
+### Phase 3
+- users can make posts viewable only to certain groups.
+- users can make comments and react to posts with either preset options or hand written reactions.
