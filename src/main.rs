@@ -22,6 +22,7 @@ async fn main() -> std::io::Result<()> {
             .service(echo)
             .route("/hey", web::get().to(manual_hello))
     })
+    // has to bind to 0.0.0.0 for docker
     .bind(("0.0.0.0", 8080))?
     .run()
     .await
