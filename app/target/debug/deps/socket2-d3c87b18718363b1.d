@@ -1,0 +1,11 @@
+/Users/evandrake/Documents/school/csci_465/culinary_ocean/app/target/debug/deps/socket2-d3c87b18718363b1.rmeta: /Users/evandrake/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/lib.rs /Users/evandrake/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sockaddr.rs /Users/evandrake/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/socket.rs /Users/evandrake/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sockref.rs /Users/evandrake/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sys/unix.rs
+
+/Users/evandrake/Documents/school/csci_465/culinary_ocean/app/target/debug/deps/libsocket2-d3c87b18718363b1.rlib: /Users/evandrake/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/lib.rs /Users/evandrake/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sockaddr.rs /Users/evandrake/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/socket.rs /Users/evandrake/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sockref.rs /Users/evandrake/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sys/unix.rs
+
+/Users/evandrake/Documents/school/csci_465/culinary_ocean/app/target/debug/deps/socket2-d3c87b18718363b1.d: /Users/evandrake/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/lib.rs /Users/evandrake/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sockaddr.rs /Users/evandrake/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/socket.rs /Users/evandrake/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sockref.rs /Users/evandrake/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sys/unix.rs
+
+/Users/evandrake/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/lib.rs:
+/Users/evandrake/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sockaddr.rs:
+/Users/evandrake/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/socket.rs:
+/Users/evandrake/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sockref.rs:
+/Users/evandrake/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sys/unix.rs:

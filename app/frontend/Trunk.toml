@@ -1,0 +1,13 @@
+[build]
+
+# target index.html for yew
+target = "index.html"
+
+# release status
+release = false
+
+# main dist dir
+dist = "../../dist"
+
+# served url
+public_url = "/"

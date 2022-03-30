@@ -12,7 +12,11 @@
 - use foundation to style
 - use rust wasm for image compression
 - use Docker for hosting
-- try to use rust wasm to replace Vue.js completely
+
+## Stack
+- Backend: actix-web + Docker + rust-trunk
+- Middleware: actix-web/rust
+- Frontend: rust-yew + tailwindcss
 
 ## Diagrams
 <p style="text-align: center;">database model using StarUML</p>
@@ -23,7 +27,7 @@
 ![Wireframing front page](models/wireframing.png)
 - ~Model rust wasm in StarUML
 
-## Idea
+## Roadmap
 ### Phase 1
 - A website consisting of users.
 - users can post a recipe.
