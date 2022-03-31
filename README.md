@@ -21,21 +21,31 @@
 ## Diagrams
 <p style="text-align: center;">database model using StarUML</p>
 
-![Model DB in StarUML](models/pre_db_model.png)
+![Model DB in StarUML](doc/models/pre_db_model.png)
 <p style="text-align: center;">Wireframe website using draw.io</p>
 
-![Wireframing front page](models/wireframing.png)
-- ~Model rust wasm in StarUML
+- DashBoard
+![Wireframing Dashboard](doc/models/Dashboard.png)
+
+- Login
+![Wireframing Login](doc/models/Login.png)
 
 ## Roadmap
 ### Phase 1
-- A website consisting of users.
-- users can post a recipe.
-- a recipe will consist of list of ingredients, and cooking process.
-- This will need a database that will persist users, and the recipes.
+- Login page built in yew
+- actix hosting yew login page
 ### Phase 2
-- users can separate themselves by viewable groups(friends, family)
-- users will be able to add a picture to there recipes.
+- actix DB
+- yew communicating with actix DB
+- auth setup for yew login page
 ### Phase 3
-- users can make posts viewable only to certain groups.
-- users can make comments and react to posts with either preset options or hand written reactions.
+- yew account page with all information shown for user
+- actix DB hosting information in sqlite DB for user
+### Phase 4
+- yew user Dashboard
+- actix DB for hosting Dashboard
+### Phase 5
+- yew user upload for recipes
+- actix upload recipe data to DB
+### Phase 6
+- tailwindcss styling for all pages
