@@ -3,7 +3,10 @@
 *.pdf
 
 
-# Added by cargo
+# Added for cargo
 
-/target
+/app/target
+/app/dist
 /dist
+*.json
+*.wasm

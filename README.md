@@ -48,4 +48,8 @@
 - yew user upload for recipes
 - actix upload recipe data to DB
 ### Phase 6
-- tailwindcss styling for all pages
+- tailwindcss *complete* styling for all pages
+### Phase 7
+- adaptive UI for Dashboard
+### Phase 8
+- adaptive UI for Login
