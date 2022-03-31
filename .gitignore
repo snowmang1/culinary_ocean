@@ -5,8 +5,13 @@
 
 # Added for cargo
 
+/app/backend/target
+/app/frontend/target
+/app/backend/migrations
+/app/backend/static
 /app/target
 /app/dist
 /dist
 *.json
 *.wasm
+/app/backend/db

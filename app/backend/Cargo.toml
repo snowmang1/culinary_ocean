@@ -10,3 +10,13 @@ actix-web = "4"
 actix-files = "0.6.0"
 env_logger = "0.9.0"
 log = "0.4"
+
+# db
+# # serialization
+serde = "1.0.136"
+serde_json = "1.0.79"
+serde_derive = "1.0.136"
+
+# # db managment
+diesel = { version = "1.4.4", features = ["sqlite"] }
+dotenv = "0.15.0"

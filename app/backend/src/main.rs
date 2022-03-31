@@ -10,7 +10,7 @@ async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
         App::new()
             // allows visiter to view static dir with index file set to index.html
-            // this static is the root path and should only be defined last
+            // this server location is the root path and should only be defined last
             // https://github.com/actix/examples/blob/master/basics/static-files/src/main.rs
             .service(Files::new("/", "./static").index_file("index.html"))
             .wrap(Logger::default())
