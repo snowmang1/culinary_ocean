@@ -13,10 +13,9 @@ log = "0.4"
 
 # db
 # # serialization
-serde = "1.0.136"
+serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0.79"
-serde_derive = "1.0.136"
 
 # # db managment
-diesel = { version = "1.4.4", features = ["sqlite"] }
-dotenv = "0.15.0"
+diesel = { version = "1.4.8", features = ["sqlite", "r2d2"] }
+dotenv = "0.15"
