@@ -1,4 +1,5 @@
 use diesel::prelude::*;
+use uuid::Uuid;
 
 use crate::models;
 
@@ -14,6 +15,7 @@ pub fn insert_new_user(
     use crate::schema::users::dsl::*;
 
     let new_user = models::User {
+        id: Uuid::new_v4().to_string(),
         user_email: em.to_owned(),
         password: ps.to_owned()
     };
@@ -23,16 +25,17 @@ pub fn insert_new_user(
     Ok(new_user)
 }
 
-// run query to retrieve user by email
+// run query to retrieve user by id
 pub fn find_user_by_email(
-    email: String,
+    uid: Uuid,
     conn: &SqliteConnection,
-) -> Result<models::User, DbError> {
+) -> Result<Option<models::User>, DbError> {
     use crate::schema::users::dsl::*;
 
     let user = users
-        .filter(user_email.eq(email))
-        .get_result::<models::User>(conn)?;
+        .filter(id.eq(uid.to_string()))
+        .first::<models::User>(conn)
+        .optional()?;
 
         Ok(user)
 }

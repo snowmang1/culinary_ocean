@@ -1,5 +1,6 @@
 table! {
-    users (user_email) {
+    users (id) {
+        id -> Text,
         user_email -> Text,
         password -> Text,
     }

@@ -19,3 +19,4 @@ serde_json = "1.0.79"
 # # db managment
 diesel = { version = "1.4.8", features = ["sqlite", "r2d2"] }
 dotenv = "0.15"
+uuid = { version = "0.8", features = ["serde", "v4"] } # unique id gen
