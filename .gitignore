@@ -15,4 +15,5 @@
 *.json
 *.wasm
 /app/backend/db
-*/target
+target
+
