@@ -21,6 +21,7 @@ pub fn insert_new_user(
     };
 
     diesel::insert_into(users).values(&new_user).execute(conn)?;
+    println!("new user with email {} has been added!", em);
 
     Ok(new_user)
 }

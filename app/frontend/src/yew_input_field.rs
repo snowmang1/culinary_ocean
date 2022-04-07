@@ -1,6 +1,10 @@
 // Login Form
 use web_sys::HtmlInputElement;
 use yew::{Context, Html, html, NodeRef, Component};
+use wasm_bindgen_futures::spawn_local;
+use std::collections::HashMap;
+
+// use crate::yew_http;
 
 pub enum Msg {
     FillValue,
@@ -30,6 +34,18 @@ impl Component for Input {
     fn update(&mut self, _ctx: &Context<Self>, msg: Self::Message) -> bool{
         match msg {
             Msg::FillValue => {
+                spawn_local( async {
+                    let mut user = HashMap::new();
+                    user.insert("user_email", "email");
+                    user.insert("password", "123");
+
+                    let client = reqwest::Client::new();
+                    client.post("http://localhost:8080/user")
+                        .json(&user)
+                        .send()
+                        .await
+                        .expect("send");
+                });
                 if let Some(input) = self.user_ref.cast::<HtmlInputElement>() {
                     if let Some(input) = self.pass_ref.cast::<HtmlInputElement>() {
                         // cast each node ref to html element
