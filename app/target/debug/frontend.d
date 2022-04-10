@@ -1,1 +1,0 @@
-/Users/evandrake/Documents/school/csci_465/culinary_ocean/app/target/debug/frontend: /Users/evandrake/Documents/school/csci_465/culinary_ocean/app/frontend/src/main.rs /Users/evandrake/Documents/school/csci_465/culinary_ocean/app/frontend/src/yew_button.rs /Users/evandrake/Documents/school/csci_465/culinary_ocean/app/frontend/src/yew_input_field.rs

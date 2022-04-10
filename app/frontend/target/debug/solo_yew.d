@@ -1,1 +1,0 @@
-/Users/evandrake/Documents/school/csci_465/yew_stuff/solo_yew/target/debug/solo_yew: /Users/evandrake/Documents/school/csci_465/yew_stuff/solo_yew/src/main.rs /Users/evandrake/Documents/school/csci_465/yew_stuff/solo_yew/src/yew_button.rs /Users/evandrake/Documents/school/csci_465/yew_stuff/solo_yew/src/yew_input_field.rs

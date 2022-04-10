@@ -21,7 +21,7 @@
 ## Diagrams
 <p style="text-align: center;">database model using StarUML</p>
 
-![Model DB in StarUML](doc/models/pre_db_model.png)
+![Model DB in StarUML](doc/models/naive_db.png)
 <p style="text-align: center;">Wireframe website using draw.io</p>
 
 - DashBoard
