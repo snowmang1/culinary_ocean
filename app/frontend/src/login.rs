@@ -5,8 +5,6 @@ use wasm_bindgen_futures::spawn_local;
 use std::collections::HashMap;
 use gloo_console::log;
 
-// use crate::yew_http;
-
 pub enum Msg {
     FillValue,
 }
@@ -41,9 +39,11 @@ impl Component for Input {
                         self.pass = input.value()
                     }
                     self.user = input.value();
-                    let user_name = self.user.clone();
+                    // start posting process
+                    let user_name = self.user.clone(); // have to clone them to get ownership
                     let user_pass = self.pass.clone();
-                    log!("user email", user_name.to_owned());
+                    log!("user email", user_name.to_owned()); // log email
+                    // spawn thread to post
                     spawn_local( async {
                         let mut user = HashMap::new();
                         user.insert("user_email", user_name);
@@ -56,8 +56,8 @@ impl Component for Input {
                             .await
                             .expect("send");
                     });
+                    // rerender page after operations
                     true
-                    // if there are elements rerender page
                 }
                 else {
                     false
