@@ -26,15 +26,15 @@ pub fn insert_new_user(
     Ok(new_user)
 }
 
-// run query to retrieve user by id
-pub fn find_user_by_uid(
-    uid: Uuid,
+// query by email
+pub fn find_user_by_email(
+    email: String,
     conn: &SqliteConnection,
 ) -> Result<Option<models::User>, DbError> {
     use crate::schema::users::dsl::*;
 
     let user = users
-        .filter(id.eq(uid.to_string()))
+        .filter(user_email.eq(email))
         .first::<models::User>(conn)
         .optional()?;
 

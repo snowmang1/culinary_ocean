@@ -5,7 +5,6 @@ use actix_web::{get, middleware, post, web, Error, HttpResponse, middleware::Log
 use actix_files::Files;
 use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
-use uuid::Uuid;
 
 mod models;
 mod actions;
@@ -13,18 +12,18 @@ mod schema;
 
 type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 
-// query db
-#[get("/user/{user_id}")]
-async fn get_user (
+// query db for email
+#[get("/user/{user_email}")]
+async fn get_user_email (
     pool: web::Data<DbPool>,
-    user_uid: web::Path<Uuid>
+    email: web::Path<String>
 ) -> Result<HttpResponse, Error> {
-    let user_uid = user_uid.into_inner();
+    let email = email.into_inner();
 
     // web::block
     let user = web::block(move || {
         let conn = pool.get()?;
-        actions::find_user_by_uid(user_uid, &conn)
+        actions::find_user_by_email(email, &conn)
     })
     .await?
     .map_err(actix_web::error::ErrorInternalServerError)?;
@@ -32,7 +31,7 @@ async fn get_user (
     if let Some(user) = user {
         Ok(HttpResponse::Ok().json(user))
     } else {
-        let res = HttpResponse::NotFound().body(format!("No user found with uid: {}", user_uid));
+        let res = HttpResponse::NotFound().body(format!("No user found with that email"));
         Ok(res)
     }
 }
@@ -76,7 +75,7 @@ async fn main() -> std::io::Result<()> {
             .app_data(web::Data::new(pool.clone()))
             .wrap(middleware::Logger::default())
             .service(add_user)
-            .service(get_user)
+            .service(get_user_email)
             // allows visiter to view static dir with index file set to index.html
             // this server location is the root path and should only be defined last
             // https://github.com/actix/examples/blob/master/basics/static-files/src/main.rs
@@ -94,9 +93,8 @@ mod tests {
     use actix_web::test;
 
     #[actix_web::test]
-    async fn user_routes() {
+    async fn email_query_test() {
         std::env::set_var("RUST_LOG", "actix_web=debug");
-        env_logger::init();
         dotenv::dotenv().ok();
 
         let connspec = std::env::var("DATABASE_URL").expect("DATABASE_URL");
@@ -109,7 +107,7 @@ mod tests {
             App::new()
                 .app_data(web::Data::new(pool.clone()))
                 .wrap(middleware::Logger::default())
-                .service(get_user)
+                .service(get_user_email)
                 .service(add_user),
         )
         .await;
@@ -118,27 +116,27 @@ mod tests {
         let req = test::TestRequest::post()
             .uri("/user")
             .set_json(&models::NewUser {
-                user_email: String::from("me@mail"),
-                password: String::from("123"),
+                user_email: String::from("test@mail.com"),
+                password: String::from("test"),
             })
             .to_request();
 
         let resp: models::User = test::call_and_read_body_json(&mut app, req).await;
 
-        assert_eq!(resp.user_email, "me@mail");
+        assert_eq!(resp.user_email, "test@mail.com");
 
         // Get a user
         let req = test::TestRequest::get()
-            .uri(&format!("/user/{}", resp.id))
+            .uri(&format!("/user/{}", resp.user_email))
             .to_request();
 
         let resp: models::User = test::call_and_read_body_json(&mut app, req).await;
 
-        assert_eq!(resp.user_email, "me@mail");
+        assert_eq!(resp.user_email, "test@mail.com");
 
         // Delete new user from table
         use crate::schema::users::dsl::*;
-        diesel::delete(users.filter(id.eq(resp.id)))
+        diesel::delete(users.filter(user_email.eq(resp.user_email)))
             .execute(&pool.get().expect("couldn't get db connection from pool"))
             .expect("couldn't delete test user from table");
     }
