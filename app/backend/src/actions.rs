@@ -27,7 +27,7 @@ pub fn insert_new_user(
 }
 
 // run query to retrieve user by id
-pub fn find_user_by_email(
+pub fn find_user_by_uid(
     uid: Uuid,
     conn: &SqliteConnection,
 ) -> Result<Option<models::User>, DbError> {

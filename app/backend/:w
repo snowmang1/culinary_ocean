@@ -37,6 +37,13 @@ async fn get_user (
     }
 }
 
+// query db by email
+#[get("/user/{user_id})]
+async fn get_user_email (
+    pool: web::Data<DbPool>,
+    user_email: web::Path<String>
+)
+
 // Inserts new user
 #[post("/user")]
 async fn add_user(
