@@ -20,7 +20,7 @@ pub fn insert_new_user(
         password: ps.to_owned()
     };
 
-    diesel::insert_into(users).values(&new_user).execute(conn)?;
+    diesel::insert_into(users).values(&new_user).execute(conn)?; // ERROR CHECKING NEEDED
     println!("new user with email {} has been added!", em);
 
     Ok(new_user)
@@ -36,7 +36,7 @@ pub fn find_user_by_email(
     let user = users
         .filter(user_email.eq(email))
         .first::<models::User>(conn)
-        .optional()?;
+        .optional()?;   // ERROR CHECKING NEEDED
 
         Ok(user)
 }

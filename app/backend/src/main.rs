@@ -1,14 +1,14 @@
 #[macro_use]
 extern crate diesel;
 
-use actix_web::{get, middleware, post, web, Error, HttpResponse, middleware::Logger, App, HttpServer};
+use actix_web::{get, post, HttpResponse, Error, middleware, web, middleware::Logger, App, HttpServer};
 use actix_files::Files;
 use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
 
 mod models;
-mod actions;
 mod schema;
+mod actions;
 
 type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 
@@ -54,6 +54,7 @@ async fn add_user(
 
     Ok(HttpResponse::Ok().json(user))
 }
+
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {

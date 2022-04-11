@@ -12,6 +12,7 @@ gloo-console = "0.2.1"
 serde = "1"
 serde_json = "1"
 yew = "0.19"
+yew-router = "0.16"
 web-sys = "0.3.56"
 reqwest = { version = "0.10", features = ["blocking", "json"] }
 wasm-bindgen-futures = "0.4.29"

@@ -1,9 +1,12 @@
 // Login Form
+
 use web_sys::HtmlInputElement;
-use yew::{Context, Html, html, NodeRef, Component};
+use yew::prelude::*;
+use yew_router::prelude::*;
 use wasm_bindgen_futures::spawn_local;
 use std::collections::HashMap;
 use gloo_console::log;
+use crate::route::Route;
 
 pub enum Msg {
     FillValue,
@@ -68,6 +71,7 @@ impl Component for Input {
 
     fn view(&self, ctx: &Context<Self>) -> Html{
         let onclick = ctx.link().callback(|_| Msg::FillValue);
+
         // function for storing values in controlers
         html! {
             <div>
@@ -101,10 +105,7 @@ impl Component for Input {
                 </div>
                 <div id="Welcome messege">
                     if &self.user != "" && &self.pass != "" {
-                        <p class=" text-align center" >{ format!{
-                            "Welcome Back {} Nice Password: {}",
-                            &self.user, &self.pass} }
-                        </p>
+                        <Link<Route> to={Route::Account}>{"Enter Culinary Ocean"}</Link<Route>>
                     }
                 </div>
             </div>
