@@ -1,20 +1,11 @@
 mod login;
 mod route;
+mod account;
 
 use yew_router::prelude::*;
 use yew::prelude::*;
 use route::Route;
 
-
-// acount page entry point
-#[function_component(Account)]
-pub fn account_handler() -> Html{
-    html! {
-        <div>
-            <h1> {"This is the Account Page"}</h1>
-        </div>
-    }
-}
 
 // function formater for login page
 #[function_component(Login)]
@@ -43,9 +34,10 @@ fn nf() -> Html{
 }
 
 fn switch(routes: &Route) -> Html {
+    use account::AccountPage;
     match routes {
         Route::Login => html!{ <Login /> },
-        Route::Account => html!{ <Account /> },
+        Route::Account => html!{ <AccountPage /> },
         // all valid page routes get inserted above here
         Route::NotFound => html! { <NotFound /> },
     }
