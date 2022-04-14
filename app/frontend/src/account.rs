@@ -10,6 +10,7 @@ impl Component for AccountPage {
     type Properties = ();
 
     fn create(_ctx: &Context<Self>) -> Self{
+        // query database grab relevent info about user
         Self {
             user: "User".to_string(),
         }

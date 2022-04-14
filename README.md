@@ -30,6 +30,9 @@
 - Login
 ![Wireframing Login](doc/models/Login.png)
 
+- Account
+![Account Page](doc/models/Account_page.png)
+
 ## Roadmap
 ### Phase 1
 - Login page built in yew
