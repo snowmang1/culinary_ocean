@@ -1,30 +1,29 @@
 // Login Form
 
+use crate::route::Route;
+use gloo_console::log;
+use std::collections::HashMap;
+use wasm_bindgen_futures::spawn_local;
 use web_sys::HtmlInputElement;
 use yew::prelude::*;
 use yew_router::prelude::*;
-use wasm_bindgen_futures::spawn_local;
-use std::collections::HashMap;
-use gloo_console::log;
-use crate::route::Route;
 
 pub enum Msg {
     FillValue,
 }
 
 pub struct Input {
-    user: String,       // value of the text field
+    user: String, // value of the text field
     pass: String,
-    user_ref: NodeRef,  // ref to user element
-    pass_ref: NodeRef   // ref to pass element
-
+    user_ref: NodeRef, // ref to user element
+    pass_ref: NodeRef, // ref to pass element
 }
 
 impl Component for Input {
     type Message = Msg;
     type Properties = ();
 
-    fn create(_ctx: &Context<Self>) -> Self{
+    fn create(_ctx: &Context<Self>) -> Self {
         Self {
             user: String::from(""),
             pass: String::from(""),
@@ -33,7 +32,7 @@ impl Component for Input {
         }
     }
 
-    fn update(&mut self, _ctx: &Context<Self>, msg: Self::Message) -> bool{
+    fn update(&mut self, _ctx: &Context<Self>, msg: Self::Message) -> bool {
         match msg {
             Msg::FillValue => {
                 if let Some(input) = self.user_ref.cast::<HtmlInputElement>() {
@@ -46,14 +45,15 @@ impl Component for Input {
                     let user_name = self.user.clone(); // have to clone them to get ownership
                     let user_pass = self.pass.clone();
                     log!("user email", user_name.to_owned()); // log email
-                    // spawn thread to post
-                    spawn_local( async {
+                                                              // spawn thread to post
+                    spawn_local(async {
                         let mut user = HashMap::new();
                         user.insert("user_email", user_name);
                         user.insert("password", user_pass);
 
                         let client = reqwest::Client::new();
-                        client.post("http://localhost:8080/user")
+                        client
+                            .post("http://localhost:8080/user")
                             .json(&user)
                             .send()
                             .await
@@ -61,15 +61,14 @@ impl Component for Input {
                     });
                     // rerender page after operations
                     true
-                }
-                else {
+                } else {
                     false
                 }
             }
         }
     }
 
-    fn view(&self, ctx: &Context<Self>) -> Html{
+    fn view(&self, ctx: &Context<Self>) -> Html {
         let onclick = ctx.link().callback(|_| Msg::FillValue);
 
         // function for storing values in controlers

@@ -1,18 +1,17 @@
+mod account;
 mod login;
 mod route;
-mod account;
 
-use yew_router::prelude::*;
-use yew::prelude::*;
 use route::Route;
-
+use yew::prelude::*;
+use yew_router::prelude::*;
 
 // function formater for login page
 #[function_component(Login)]
-pub fn dom_handler() -> Html{
+pub fn dom_handler() -> Html {
     // TODO add this html code to login rs and just use struct component
     use login::Input;
-    html!{
+    html! {
         <div class="flex justify-center">
             <div class="grid grid-cols-1 gap-10">
                 <Input />
@@ -22,7 +21,7 @@ pub fn dom_handler() -> Html{
 }
 
 #[function_component(NotFound)]
-fn nf() -> Html{
+fn nf() -> Html {
     // 404 page not found page
     // TODO hook this up with actix someday
     html! {
@@ -36,8 +35,8 @@ fn nf() -> Html{
 fn switch(routes: &Route) -> Html {
     use account::AccountPage;
     match routes {
-        Route::Login => html!{ <Login /> },
-        Route::Account => html!{ <AccountPage /> },
+        Route::Login => html! { <Login /> },
+        Route::Account => html! { <AccountPage /> },
         // all valid page routes get inserted above here
         Route::NotFound => html! { <NotFound /> },
     }
