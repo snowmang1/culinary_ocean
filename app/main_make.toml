@@ -1,0 +1,16 @@
+
+[tasks.build]
+script = [
+	"cargo make --makefile frontend/Makefile.toml trunk"
+]
+
+[tasks.run]
+script = [
+	"cargo make --makefile frontend/Makefile.toml trunk"
+]
+
+[tasks.flow]
+dependencies = [
+	"frontend",
+	"backend"
+]
