@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-03-31T20:16:44.659Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.4 Safari/605.1.15" etag="QswwEqJ9Upa1C0l0c1JK" version="17.2.5" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2022-04-12T22:30:11.413Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.4 Safari/605.1.15" etag="iDZTPyHotF7mmGOZ3CBI" version="17.4.3" type="github" pages="4">
   <diagram id="7Y9GmNgVDP8SF2NrLYEP" name="Page Frame">
-    <mxGraphModel dx="1198" dy="1429" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1167" dy="1230" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -168,7 +168,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="SBo6iEPIO265-dDXYauc" name="Login Page">
-    <mxGraphModel dx="798" dy="1029" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="767" dy="830" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -239,7 +239,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="gUYSYIf9ZaAup0tVx4OH" name="Dashboard">
-    <mxGraphModel dx="1198" dy="1429" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1167" dy="1230" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -249,40 +249,40 @@
         <mxCell id="lfR0UytrTplTLXdz6UHC-2" value="user Dashboard" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=23;fontColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="195" y="-20" width="210" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="mkbeZM01P8guVN0ftnJ4-2" value="" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FFFFFF;fillColor=#919191;" vertex="1" parent="1">
+        <mxCell id="mkbeZM01P8guVN0ftnJ4-2" value="" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FFFFFF;fillColor=#919191;" parent="1" vertex="1">
           <mxGeometry x="60" y="50" width="570" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="mkbeZM01P8guVN0ftnJ4-3" value="Other recipe quick links" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FFFFFF;fillColor=#919191;" vertex="1" parent="1">
+        <mxCell id="mkbeZM01P8guVN0ftnJ4-3" value="Other recipe quick links" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FFFFFF;fillColor=#919191;" parent="1" vertex="1">
           <mxGeometry x="-30" y="50" width="80" height="380" as="geometry" />
         </mxCell>
-        <mxCell id="mkbeZM01P8guVN0ftnJ4-4" value="" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FFFFFF;fillColor=#919191;" vertex="1" parent="1">
+        <mxCell id="mkbeZM01P8guVN0ftnJ4-4" value="" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FFFFFF;fillColor=#919191;" parent="1" vertex="1">
           <mxGeometry x="60" y="90" width="570" height="340" as="geometry" />
         </mxCell>
-        <mxCell id="mkbeZM01P8guVN0ftnJ4-5" value="Picture of finished dish" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FFFFFF;fillColor=#919191;" vertex="1" parent="1">
+        <mxCell id="mkbeZM01P8guVN0ftnJ4-5" value="Picture of finished dish" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FFFFFF;fillColor=#919191;" parent="1" vertex="1">
           <mxGeometry x="80" y="110" width="350" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="mkbeZM01P8guVN0ftnJ4-6" value="Ingredients,&lt;br&gt;&lt;br&gt;prep,&lt;br&gt;&lt;br&gt;step by step method &lt;br&gt;(optional)" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FFFFFF;fillColor=#919191;" vertex="1" parent="1">
+        <mxCell id="mkbeZM01P8guVN0ftnJ4-6" value="Ingredients,&lt;br&gt;&lt;br&gt;prep,&lt;br&gt;&lt;br&gt;step by step method &lt;br&gt;(optional)" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FFFFFF;fillColor=#919191;" parent="1" vertex="1">
           <mxGeometry x="440" y="110" width="170" height="300" as="geometry" />
         </mxCell>
-        <mxCell id="mkbeZM01P8guVN0ftnJ4-7" value="Suggestions &amp;amp; Comments" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FFFFFF;fillColor=#919191;" vertex="1" parent="1">
+        <mxCell id="mkbeZM01P8guVN0ftnJ4-7" value="Suggestions &amp;amp; Comments" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FFFFFF;fillColor=#919191;" parent="1" vertex="1">
           <mxGeometry x="80" y="330" width="350" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="mkbeZM01P8guVN0ftnJ4-8" value="Acount" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;" vertex="1" parent="1">
+        <mxCell id="mkbeZM01P8guVN0ftnJ4-8" value="Acount" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="570" y="50" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="mkbeZM01P8guVN0ftnJ4-9" value="User" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;" vertex="1" parent="1">
+        <mxCell id="mkbeZM01P8guVN0ftnJ4-9" value="User" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="500" y="50" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="mkbeZM01P8guVN0ftnJ4-10" value="Nav Bar" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;" vertex="1" parent="1">
+        <mxCell id="mkbeZM01P8guVN0ftnJ4-10" value="Nav Bar" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="160" y="50" width="340" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="mkbeZM01P8guVN0ftnJ4-11" value="Page title" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;" vertex="1" parent="1">
+        <mxCell id="mkbeZM01P8guVN0ftnJ4-11" value="Page title" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="60" y="50" width="90" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="mkbeZM01P8guVN0ftnJ4-12" value="&lt;h1&gt;Comments&lt;/h1&gt;&lt;div&gt;if other users are not logged in they can not see comments or suggestions.&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#FFFFFF;" vertex="1" parent="1">
+        <mxCell id="mkbeZM01P8guVN0ftnJ4-12" value="&lt;h1&gt;Comments&lt;/h1&gt;&lt;div&gt;if other users are not logged in they can not see comments or suggestions.&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="205" y="510" width="190" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="mkbeZM01P8guVN0ftnJ4-13" value="" style="curved=1;endArrow=classic;html=1;rounded=0;fontColor=#FFFFFF;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;strokeColor=#F00202;" edge="1" parent="1" source="mkbeZM01P8guVN0ftnJ4-12" target="mkbeZM01P8guVN0ftnJ4-7">
+        <mxCell id="mkbeZM01P8guVN0ftnJ4-13" value="" style="curved=1;endArrow=classic;html=1;rounded=0;fontColor=#FFFFFF;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;strokeColor=#F00202;" parent="1" source="mkbeZM01P8guVN0ftnJ4-12" target="mkbeZM01P8guVN0ftnJ4-7" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="280" y="420" as="sourcePoint" />
             <mxPoint x="330" y="370" as="targetPoint" />
@@ -291,6 +291,29 @@
               <mxPoint x="210" y="460" />
             </Array>
           </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="ak0fGKNTUOt71rb8wduT" name="Account_Page">
+    <mxGraphModel dx="767" dy="830" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="OQ0XC8HnRqt_Iu_0W_-C-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="120" y="80" width="640" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="OQ0XC8HnRqt_Iu_0W_-C-2" value="Welcome Back &amp;lt;Username&amp;gt;!!" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="325" y="120" width="230" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="OQ0XC8HnRqt_Iu_0W_-C-3" value="Recipe names&lt;br&gt;listed:&lt;br&gt;&lt;br&gt;recipe A&lt;br&gt;&lt;br&gt;recipe B&lt;br&gt;&lt;br&gt;recipe C" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="160" width="120" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="OQ0XC8HnRqt_Iu_0W_-C-4" value="Create new recipe button" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="380" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OQ0XC8HnRqt_Iu_0W_-C-5" value="Friends Recipe&#39;s&lt;br&gt;listed:&lt;br&gt;&lt;br&gt;recipe A&lt;br&gt;&lt;br&gt;recipe B&lt;br&gt;&lt;br&gt;recipe C" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="600" y="160" width="120" height="280" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
