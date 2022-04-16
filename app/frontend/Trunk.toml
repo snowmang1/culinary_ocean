@@ -1,13 +1,13 @@
 [build]
 
 # target index.html for yew
-target = "index.html"
+target = "./index.html"
 
 # release status
 release = false
 
 # main dist dir
-dist = "../backend/static"
+dist = "../backend/static/"
 
 # served url
 public_url = "/"

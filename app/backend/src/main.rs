@@ -1,22 +1,24 @@
 #[macro_use]
 extern crate diesel;
 
-use actix_web::{get, post, HttpResponse, Error, middleware, web, middleware::Logger, App, HttpServer};
 use actix_files::Files;
+use actix_web::{
+    get, middleware, middleware::Logger, post, web, App, Error, HttpResponse, HttpServer,
+};
 use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
 
+mod actions;
 mod models;
 mod schema;
-mod actions;
 
 type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 
 // query db for email
 #[get("/user/{user_email}")]
-async fn get_user_email (
+async fn get_user_email(
     pool: web::Data<DbPool>,
-    email: web::Path<String>
+    email: web::Path<String>,
 ) -> Result<HttpResponse, Error> {
     let email = email.into_inner();
 
@@ -54,7 +56,6 @@ async fn add_user(
 
     Ok(HttpResponse::Ok().json(user))
 }
-
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {

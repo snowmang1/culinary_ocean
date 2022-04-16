@@ -12,5 +12,5 @@ pub struct User {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct NewUser {
     pub user_email: String,
-    pub password: String
+    pub password: String,
 }

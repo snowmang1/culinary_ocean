@@ -1,0 +1,17 @@
+
+[tasks.trunk]
+script = [
+	"trunk build"
+]
+dependencies = ["test"]
+
+[tasks.run]
+script = [
+	"trunk build"
+]
+dependencies = ["test"]
+
+
+[tasks.test]
+command = "cargo"
+args = ["test"]

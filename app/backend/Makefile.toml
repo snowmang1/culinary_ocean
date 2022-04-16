@@ -1,0 +1,13 @@
+
+[tasks.trunk]
+command = "cargo"
+args = ["build"]
+
+[tasks.run]
+command = "cargo"
+args = ["run"]
+dependencies = ["test"]
+
+[tasks.test]
+command = "cargo"
+args = ["test"]

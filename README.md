@@ -56,3 +56,18 @@
 - adaptive UI for Dashboard
 ### Phase 8
 - adaptive UI for Login
+
+# Development
+- I use cargo-make to compile there is an easy way to utilize my pipeline
+- make sure to be in the app dir this is where development is done
+## building
+- step 1: command ``` cargo make --makefile main_make.toml build ```
+- - this is for testing and build project
+
+## Running
+- step 1: command ``` cargo make --makefile main_make.toml run ```
+- - runs all rust unit test your build
+- - uses trunk to build wasm in frontend dir
+- - wasm is auto transferd to backend
+- - backend will compile and run unit tests
+- - backend will then start the actix server at [here](localhost:8080)
