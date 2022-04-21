@@ -18,7 +18,15 @@ impl Component for AccountPage {
     fn view(&self, _ctx: &Context<Self>) -> Html {
         html! {
             <div>
-                <h1>{self.user.clone()}</h1>
+                <div>
+                    <h1>{format!("Welcome Back {}",
+                                self.user.clone())}
+                    </h1>
+                </div>
+                <div>
+                    // This will be our new recipe button
+                    <h1>{"new recipe"}</h1>
+                </div>
             </div>
         }
     }

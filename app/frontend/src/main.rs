@@ -23,7 +23,6 @@ pub fn dom_handler() -> Html {
 #[function_component(NotFound)]
 fn nf() -> Html {
     // 404 page not found page
-    // TODO hook this up with actix someday
     html! {
         <div>
             <h1>{ "404 Page Not Found" }</h1>
@@ -36,6 +35,7 @@ fn switch(routes: &Route) -> Html {
     use account::AccountPage;
     match routes {
         Route::Login => html! { <Login /> },
+        // TODO Account page needs to be user specific
         Route::Account => html! { <AccountPage /> },
         // all valid page routes get inserted above here
         Route::NotFound => html! { <NotFound /> },
