@@ -10,6 +10,8 @@ pub fn insert_new_user(
     // prevent collision with 'email' column
     em: String,
     ps: String,
+    ins: String,
+    ing: String,
     conn: &SqliteConnection,
 ) -> Result<models::User, DbError> {
     use crate::schema::users::dsl::*;
@@ -18,6 +20,8 @@ pub fn insert_new_user(
         id: Uuid::new_v4().to_string(),
         user_email: em.to_owned(),
         password: ps.to_owned(),
+        instructions: ins.to_owned(),
+        ingredients: ing.to_owned()
     };
 
     diesel::insert_into(users).values(&new_user).execute(conn)?; // ERROR CHECKING NEEDED
