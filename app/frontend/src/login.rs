@@ -45,12 +45,12 @@ impl Component for Input {
                     let user_name = self.user.clone(); // have to clone them to get ownership
                     let user_pass = self.pass.clone();
                     log!("user email", user_name.to_owned()); // log email
-                        // spawn thread to post
+
+                    // spawn thread to post
                     spawn_local(async {
                         let mut user = HashMap::new();
                         user.insert("user_email", user_name);
                         user.insert("password", user_pass);
-
                         let client = reqwest::Client::new();
                         client
                             .post("http://localhost:8080/user")
@@ -59,12 +59,14 @@ impl Component for Input {
                             .await
                             .expect("send");
                     });
+
                     // rerender page after operations
                     true
                 } else {
                     false
                 }
-            }
+            } // FillValue
+
         }
     }
 

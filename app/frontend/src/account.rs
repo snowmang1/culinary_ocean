@@ -1,21 +1,76 @@
+use gloo_console::log;
+use std::collections::HashMap;
+use wasm_bindgen_futures::spawn_local;
+use web_sys::HtmlInputElement;
 use yew::prelude::*;
+
+pub enum Msg {
+    FormCon,
+}
 
 pub struct AccountPage {
     user: String,
+    recipe_name: String,
+    recipe_instr: String,
+    name_ref: NodeRef,
+    instr_ref: NodeRef,
 }
 
 impl Component for AccountPage {
-    type Message = ();
+    type Message = Msg;
     type Properties = ();
 
     fn create(_ctx: &Context<Self>) -> Self {
         // query database grab relevent info about user
         Self {
-            user: "User".to_string(),
+            user: "Snow".to_string(),
+            recipe_name: String::from(""),
+            recipe_instr: String::from(""),
+            name_ref: NodeRef::default(),
+            instr_ref: NodeRef::default(),
         }
     }
 
-    fn view(&self, _ctx: &Context<Self>) -> Html {
+    fn update(&mut self, _ctx: &Context<Self>, msg: Self::Message) -> bool {
+        match msg {
+            Msg::FormCon => {
+                if let Some(input) = self.name_ref.cast::<HtmlInputElement>() {
+                    if let Some(input) = self.instr_ref.cast::<HtmlInputElement>() {
+                        self.recipe_instr = input.value();
+                    }
+                    self.recipe_name = input.value();
+                    // start posting process
+                    let user_name = self.user.clone();
+                    let rec_name = self.recipe_name.clone();
+                    let rec = self.recipe_instr.clone();
+                    let pass = "123".to_string(); // password does not matter so it is magic
+                    log!("user email", user_name.to_owned()); // log email
+
+                    spawn_local( async {
+                        let mut user = HashMap::new();
+                        user.insert("user_email", user_name);
+                        user.insert("password", pass);
+                        user.insert("instructions", rec);
+                        user.insert("ingredients", rec_name);
+                        let client = reqwest::Client::new();
+                        client
+                            .post("http://localhost:8080/user")
+                            .json(&user)
+                            .send()
+                            .await
+                            .expect("send");
+                    });
+                    true
+                } else {
+                    false
+                }
+            } // formcon
+        }
+    }
+
+    fn view(&self, ctx: &Context<Self>) -> Html {
+        let onclick = ctx.link().callback(|_| Msg::FormCon);
+
         html! {
             <div>
                 <div>
@@ -23,9 +78,44 @@ impl Component for AccountPage {
                                 self.user.clone())}
                     </h1>
                 </div>
-                <div>
-                    // This will be our new recipe button
-                    <h1>{"new recipe"}</h1>
+                <div id="Recipe Form">
+                    // form with text input
+                    <label>{"Recipe Name"}</label>
+                    <br/>
+                    <input
+                        class="bg-gray-700 rounded-md"
+                        ref={self.name_ref.clone()}
+                    />
+                    <br/>
+                    <label>{"Recipe Instructions"}</label>
+                    <br/>
+                    <input
+                        class="bg-gray-700 rounded-md"
+                        ref={self.instr_ref.clone()}
+                    />
+                    <input
+                        class="mt-2 bg-gray-500 rounded hover:rounded-md"
+                        type="submit"
+                        onclick = {onclick}
+                        />
+                </div>
+                <div id="test">
+                    if &self.recipe_name != "" && &self.recipe_instr != ""{
+                        <div>
+                            <h1>
+                                { format!{
+                                "recipe name == {}",
+                                &self.recipe_name}
+                                }
+                            </h1>
+                            <h1>
+                                { format! {
+                                "recipe instructions == {}",
+                                &self.recipe_instr}
+                                }
+                            </h1>
+                        </div>
+                    }
                 </div>
             </div>
         }

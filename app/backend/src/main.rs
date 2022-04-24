@@ -49,7 +49,7 @@ async fn add_user(
     // use web::block to offload blocking Diesel code without blocking server thread
     let user = web::block(move || {
         let conn = pool.get()?;
-        actions::insert_new_user(form.user_email.to_owned(), form.password.to_owned(), 
+        actions::insert_new_user(form.user_email.to_owned(), form.password.to_owned(),
                                  form.instructions.to_owned(),
                                  form.ingredients.to_owned(),
                                  &conn)
