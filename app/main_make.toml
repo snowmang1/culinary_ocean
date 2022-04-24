@@ -6,11 +6,7 @@ script = [
 
 [tasks.run]
 script = [
-	"cargo make --makefile frontend/Makefile.toml trunk"
-]
-
-[tasks.flow]
-dependencies = [
-	"frontend",
-	"backend"
+	"cargo make --makefile frontend/Makefile.toml trunk",
+	"cd backend",
+	"cargo run"
 ]
