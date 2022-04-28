@@ -1,6 +1,7 @@
 mod account;
 mod login;
 mod route;
+mod util;
 
 use route::Route;
 use yew::prelude::*;

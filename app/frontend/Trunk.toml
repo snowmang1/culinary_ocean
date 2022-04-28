@@ -7,7 +7,7 @@ target = "./index.html"
 release = false
 
 # main dist dir
-dist = "../backend/static/"
+dist = "../backend/static"
 
 # served url
 public_url = "/"

@@ -1,4 +1,9 @@
+
+use crate::util::FetchState;
+use crate::util::fetch_rec;
+
 use gloo_console::log;
+use reqwest;
 use std::collections::HashMap;
 use wasm_bindgen_futures::spawn_local;
 use web_sys::HtmlInputElement;
@@ -6,14 +11,21 @@ use yew::prelude::*;
 
 pub enum Msg {
     FormCon,
+    SetFetchState(FetchState<String>),
+    GetRec,
 }
 
 pub struct AccountPage {
+    // post vars
     user: String,
-    recipe_name: String,
+    recipe_name: String, // TODO change to ingredients
     recipe_instr: String,
     name_ref: NodeRef,
     instr_ref: NodeRef,
+    // get vars
+    // stored_rec: String,
+    // check
+    fetch_state: FetchState<String>,
 }
 
 impl Component for AccountPage {
@@ -26,12 +38,13 @@ impl Component for AccountPage {
             user: "Snow".to_string(),
             recipe_name: String::from(""),
             recipe_instr: String::from(""),
-            name_ref: NodeRef::default(),
-            instr_ref: NodeRef::default(),
+            name_ref: NodeRef::default(), instr_ref: NodeRef::default(),
+            // stored_rec: Default::default(),
+            fetch_state: FetchState::NotFetching,
         }
     }
 
-    fn update(&mut self, _ctx: &Context<Self>, msg: Self::Message) -> bool {
+    fn update(&mut self, ctx: &Context<Self>, msg: Self::Message) -> bool {
         match msg {
             Msg::FormCon => {
                 if let Some(input) = self.name_ref.cast::<HtmlInputElement>() {
@@ -46,7 +59,7 @@ impl Component for AccountPage {
                     let pass = "123".to_string(); // password does not matter so it is magic
                     log!("user email", user_name.to_owned()); // log email
 
-                    spawn_local( async {
+                    spawn_local(async {
                         let mut user = HashMap::new();
                         user.insert("user_email", user_name);
                         user.insert("password", pass);
@@ -60,64 +73,92 @@ impl Component for AccountPage {
                             .await
                             .expect("send");
                     });
+
                     true
                 } else {
                     false
                 }
             } // formcon
+            Msg::SetFetchState(fetch_state)  => {
+                self.fetch_state = fetch_state;
+                true
+            }
+            Msg::GetRec => {
+                let url = "http://localhost:8080/user/Snow";
+                ctx.link().send_future(async {
+                    match fetch_rec(url).await {
+                        Ok(md) => Msg::SetFetchState(FetchState::Success(md)),
+                        Err(err) => Msg::SetFetchState(FetchState::Failed(err)),
+                    }
+                });
+                ctx.link()
+                    .send_message(Msg::SetFetchState(FetchState::Fetching));
+                false
+            }
         }
     }
 
     fn view(&self, ctx: &Context<Self>) -> Html {
         let onclick = ctx.link().callback(|_| Msg::FormCon);
 
-        html! {
-            <div>
-                <div>
-                    <h1>{format!("Welcome Back {}",
-                                self.user.clone())}
-                    </h1>
-                </div>
-                <div id="Recipe Form">
-                    // form with text input
-                    <label>{"Recipe Name"}</label>
-                    <br/>
-                    <input
-                        class="bg-gray-700 rounded-md"
-                        ref={self.name_ref.clone()}
-                    />
-                    <br/>
-                    <label>{"Recipe Instructions"}</label>
-                    <br/>
-                    <input
-                        class="bg-gray-700 rounded-md"
-                        ref={self.instr_ref.clone()}
-                    />
-                    <input
-                        class="mt-2 bg-gray-500 rounded hover:rounded-md"
-                        type="submit"
-                        onclick = {onclick}
-                        />
-                </div>
-                <div id="test">
-                    if &self.recipe_name != "" && &self.recipe_instr != ""{
+        match &self.fetch_state {
+            FetchState::NotFetching => html! {
+                    <div>
                         <div>
-                            <h1>
-                                { format!{
-                                "recipe name == {}",
-                                &self.recipe_name}
-                                }
-                            </h1>
-                            <h1>
-                                { format! {
-                                "recipe instructions == {}",
-                                &self.recipe_instr}
-                                }
+                            <h1>{format!("Welcome Back {}",
+                                        self.user.clone())}
                             </h1>
                         </div>
-                    }
-                </div>
-            </div>
+                        <div id="Recipe Form">
+                            // form with text input
+                            <label>{"Recipe Name"}</label>
+                            <br/>
+                            <input
+                                class="bg-gray-700 rounded-md"
+                                ref={self.name_ref.clone()}
+                            />
+                            <br/>
+                            <label>{"Recipe Instructions"}</label>
+                            <br/>
+                            <input
+                                class="bg-gray-700 rounded-md"
+                                ref={self.instr_ref.clone()}
+                            />
+                            <input
+                                class="mt-2 bg-gray-500 rounded hover:rounded-md"
+                                type="submit"
+                                onclick = {onclick}
+                                />
+                        </div>
+                        <div id="test">
+                            if &self.recipe_name != "" && &self.recipe_instr != ""{
+                                <div>
+                                    <h1>
+                                        { format!{
+                                        "recipe name == {}",
+                                        &self.recipe_name}
+                                        }
+                                    </h1>
+                                    <h1>
+                                        { format! {
+                                        "recipe instructions == {}",
+                                        &self.recipe_instr}
+                                        }
+                                    </h1>
+                                </div>
+                            }
+                        </div>
+                        <div id="display rec">
+                            <button onclick={ctx.link().callback(|_| Msg::GetRec)}>
+                                {"get rec"}
+                            </button>
+                        </div>
+                    </div>
+            },
+            // these need the page html
+            FetchState::Fetching => html! {"Fetching"},
+            FetchState::Success(data) => html! { data },
+            FetchState::Failed(err) => html!{ err },
         }
     }
 }

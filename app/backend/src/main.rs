@@ -18,14 +18,12 @@ type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 #[get("/user/{user_email}")]
 async fn get_user_email(
     pool: web::Data<DbPool>,
-    email: web::Path<String>,
 ) -> Result<HttpResponse, Error> {
-    let email = email.into_inner();
 
     // web::block
     let user = web::block(move || {
         let conn = pool.get()?;
-        actions::find_user_by_email(email, &conn)
+        actions::find_user_by_email(&conn)
     })
     .await?
     .map_err(actix_web::error::ErrorInternalServerError)?;
@@ -49,10 +47,13 @@ async fn add_user(
     // use web::block to offload blocking Diesel code without blocking server thread
     let user = web::block(move || {
         let conn = pool.get()?;
-        actions::insert_new_user(form.user_email.to_owned(), form.password.to_owned(),
-                                 form.instructions.to_owned(),
-                                 form.ingredients.to_owned(),
-                                 &conn)
+        actions::insert_new_user(
+            form.user_email.to_owned(),
+            form.password.to_owned(),
+            form.instructions.to_owned(),
+            form.ingredients.to_owned(),
+            &conn,
+        )
     })
     .await?
     .map_err(actix_web::error::ErrorInternalServerError)?;
@@ -127,7 +128,7 @@ mod tests {
                 user_email: String::from("test@mail.com"),
                 password: String::from("test"),
                 instructions: String::from("please test"),
-                ingredients: String::from("test pear")
+                ingredients: String::from("test pear"),
             })
             .to_request();
 
@@ -150,5 +151,4 @@ mod tests {
             .execute(&pool.get().expect("couldn't get db connection from pool"))
             .expect("couldn't delete test user from table");
     }
-
 }
