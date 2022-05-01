@@ -1,6 +1,2 @@
+use std::collections::HashMap;
 
-use yew::prelude::*;
-
-pub fn general_page() -> HTML {
-
-}

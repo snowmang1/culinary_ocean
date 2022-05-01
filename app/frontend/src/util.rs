@@ -35,7 +35,7 @@ pub enum FetchState<T> {
     Failed(FetchError),
 }
 
-pub async fn fetch_rec(url: String) -> Result<HashMap<String, String>, FetchError> {
+pub async fn fetch_rec(url: String) -> Result<Vec<HashMap<String, String>>, FetchError> {
     let mut opts = RequestInit::new();
     opts.method("GET");
     opts.mode(RequestMode::Cors);
@@ -50,14 +50,17 @@ pub async fn fetch_rec(url: String) -> Result<HashMap<String, String>, FetchErro
     // https://rustwasm.github.io/wasm-bindgen/examples/fetch.html#the-fetch-api
     let text = JsFuture::from(resp.json()?).await?;
 
-    let v: Vec<User> = text.into_serde().unwrap();
+    let v: Vec<User> = text.into_serde().unwrap(); // deserialized json
     log!(format!("user name {}", v[0].user_email));
 
-    let mut map: HashMap<String, String> = Default::default();
-    map.insert("user_email".to_string(), v[0].user_email.clone());
-    map.insert("instructions".to_string(), v[0].instructions.clone());
-    map.insert("ingredients".to_string(), v[0].ingredients.clone());
-    Ok(map)
+    let mut vec_map: Vec<HashMap<String, String>> = Default::default();
+    for u in v {
+        let mut map: HashMap<String, String> = Default::default();
+        map.insert("instructions".to_string(), u.instructions.clone());
+        map.insert("ingredients".to_string(), u.ingredients.clone());
+        vec_map.push(map);
+    }
+    Ok(vec_map)
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -68,3 +71,11 @@ pub struct User {
     pub instructions: String,
     pub ingredients: String,
 }
+
+// pub fn vechash_to_vec(map: &HashMap<String, String>) -> Vec<String>{
+//     let mut res: Vec<String> = Default::default();
+//         for (_i, j) in map {
+//             res.push(j.clone());
+//         }
+//     res
+// }

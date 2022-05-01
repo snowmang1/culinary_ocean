@@ -11,7 +11,7 @@ use yew::prelude::*;
 
 pub enum Msg {
     FormCon,
-    SetFetchState(FetchState<HashMap<String, String>>),
+    SetFetchState(FetchState<Vec<HashMap<String, String>>>),
     GetRec,
 }
 
@@ -23,7 +23,7 @@ pub struct AccountPage {
     name_ref: NodeRef,
     instr_ref: NodeRef,
     // get vars
-    fetch_state: FetchState<HashMap<String, String>>,
+    fetch_state: FetchState<Vec<HashMap<String, String>>>,
 }
 
 impl Component for AccountPage {
@@ -97,7 +97,7 @@ impl Component for AccountPage {
 
     fn view(&self, ctx: &Context<Self>) -> Html {
         let onclick = ctx.link().callback(|_| Msg::FormCon);
-        // use crate::util::json_parse;
+        // use crate::util::vechash_to_vec;
 
         match &self.fetch_state {
             FetchState::NotFetching => html! {
@@ -210,8 +210,26 @@ impl Component for AccountPage {
                         </div>
                         // rec blocks
                         <div>
-                            <h1>{data["ingredients"].clone()}</h1>
-                            <h1>{data["instructions"].clone()}</h1>
+                            {
+                                data.into_iter().map(|data| {
+                                    html! {
+                                        <div>
+                                            <div class="recipe-names">
+                                                { format!(
+                                                    "name of recipe: {}",
+                                                     data["ingredients"])
+                                                }
+                                            </div>
+                                            <div class="recipe-instructions">
+                                                { format!(
+                                                     "recipe instructions: {}",
+                                                     data["instructions"])
+                                                }
+                                            </div>
+                                        </div>
+                                        }
+                                }).collect::<Html>()
+                            }
                         </div>
                     </div>
             },
