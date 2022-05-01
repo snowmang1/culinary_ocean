@@ -1,22 +1,22 @@
 # rust official image for rust 1.59.0
 FROM rust:1.59 as builder
 
-# create dummy for deps caching
-RUN cargo new culinary_ocean
+# create working dir
+RUN mkdir culinary_ocean
 WORKDIR /culinary_ocean
 
-# copy deps
-COPY ./Cargo.toml ./Cargo.lock ./
-
-# cache deps for later
-RUN cargo build --release
-
-# copy src
-RUN rm src/main.rs
 # use ADD for entire dir
-ADD ./src ./src
+COPY ./ ./app
 
-# compile src
-RUN cargo install --path .
+# needed for custom build scripts
+RUN cargo install cargo-make
 
-CMD ["culinary_ocean"]
+# slim build of rust to just run the server
+FROM rust:1.59-slim as server
+
+# copy only backend from builder
+RUN cargo new backend
+COPY --from=builder ./backend/* ./backend
+
+# simple run
+CMD ["cargo", "run"]
