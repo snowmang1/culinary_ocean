@@ -2,8 +2,8 @@
 
 use crate::route::Route;
 use gloo_console::log;
-use std::collections::HashMap;
-use wasm_bindgen_futures::spawn_local;
+// use std::collections::HashMap;
+// use wasm_bindgen_futures::spawn_local;
 use web_sys::HtmlInputElement;
 use yew::prelude::*;
 use yew_router::prelude::*;
@@ -43,28 +43,29 @@ impl Component for Input {
                     self.user = input.value();
                     // start posting process
                     let user_name = self.user.clone(); // have to clone them to get ownership
-                    let user_pass = self.pass.clone();
+                                                       // let user_pass = self.pass.clone();
                     log!("user email", user_name.to_owned()); // log email
-                                                              // spawn thread to post
-                    spawn_local(async {
-                        let mut user = HashMap::new();
-                        user.insert("user_email", user_name);
-                        user.insert("password", user_pass);
 
-                        let client = reqwest::Client::new();
-                        client
-                            .post("http://localhost:8080/user")
-                            .json(&user)
-                            .send()
-                            .await
-                            .expect("send");
-                    });
+                    // // spawn thread to post
+                    // spawn_local(async {
+                    //     let mut user = HashMap::new();
+                    //     user.insert("user_email", user_name);
+                    //     user.insert("password", user_pass);
+                    //     let client = reqwest::Client::new();
+                    //     client
+                    //         .post("http://localhost:8080/user")
+                    //         .json(&user)
+                    //         .send()
+                    //         .await
+                    //         .expect("send");
+                    // });
+
                     // rerender page after operations
                     true
                 } else {
                     false
                 }
-            }
+            } // FillValue
         }
     }
 
