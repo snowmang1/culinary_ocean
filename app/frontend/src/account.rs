@@ -11,21 +11,19 @@ use yew::prelude::*;
 
 pub enum Msg {
     FormCon,
-    SetFetchState(FetchState<String>),
+    SetFetchState(FetchState<HashMap<String, String>>),
     GetRec,
 }
 
 pub struct AccountPage {
     // post vars
     user: String,
-    recipe_name: String, // TODO change to ingredients
+    recipe_name: String,
     recipe_instr: String,
     name_ref: NodeRef,
     instr_ref: NodeRef,
     // get vars
-    // stored_rec: String,
-    // check
-    fetch_state: FetchState<String>,
+    fetch_state: FetchState<HashMap<String, String>>,
 }
 
 impl Component for AccountPage {
@@ -39,7 +37,6 @@ impl Component for AccountPage {
             recipe_name: String::from(""),
             recipe_instr: String::from(""),
             name_ref: NodeRef::default(), instr_ref: NodeRef::default(),
-            // stored_rec: Default::default(),
             fetch_state: FetchState::NotFetching,
         }
     }
@@ -84,10 +81,10 @@ impl Component for AccountPage {
                 true
             }
             Msg::GetRec => {
-                let url = "http://localhost:8080/user/Snow";
+                let url = "http://localhost:8080/user/Snow".to_string();
                 ctx.link().send_future(async {
                     match fetch_rec(url).await {
-                        Ok(md) => Msg::SetFetchState(FetchState::Success(md)),
+                        Ok(map) => Msg::SetFetchState(FetchState::Success(map)),
                         Err(err) => Msg::SetFetchState(FetchState::Failed(err)),
                     }
                 });
@@ -100,6 +97,7 @@ impl Component for AccountPage {
 
     fn view(&self, ctx: &Context<Self>) -> Html {
         let onclick = ctx.link().callback(|_| Msg::FormCon);
+        // use crate::util::json_parse;
 
         match &self.fetch_state {
             FetchState::NotFetching => html! {
@@ -155,9 +153,11 @@ impl Component for AccountPage {
                         </div>
                     </div>
             },
-            // these need the page html
+            // TODO these need the page html
             FetchState::Fetching => html! {"Fetching"},
-            FetchState::Success(data) => html! { data },
+            FetchState::Success(data) => html! {
+                <h1>{data["user_email"].clone()}</h1>
+            },
             FetchState::Failed(err) => html!{ err },
         }
     }
