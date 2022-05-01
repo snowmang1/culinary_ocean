@@ -153,12 +153,71 @@ impl Component for AccountPage {
                         </div>
                     </div>
             },
+
             // TODO these need the page html
             FetchState::Fetching => html! {"Fetching"},
+
             FetchState::Success(data) => html! {
-                <h1>{data["user_email"].clone()}</h1>
+                    <div>
+                        <div>
+                            <h1>{format!("Welcome Back {}",
+                                        self.user.clone())}
+                            </h1>
+                        </div>
+                        <div id="Recipe Form">
+                            // form with text input
+                            <label>{"Recipe Name"}</label>
+                            <br/>
+                            <input
+                                class="bg-gray-700 rounded-md"
+                                ref={self.name_ref.clone()}
+                            />
+                            <br/>
+                            <label>{"Recipe Instructions"}</label>
+                            <br/>
+                            <input
+                                class="bg-gray-700 rounded-md"
+                                ref={self.instr_ref.clone()}
+                            />
+                            <input
+                                class="mt-2 bg-gray-500 rounded hover:rounded-md"
+                                type="submit"
+                                onclick = {onclick}
+                                />
+                        </div>
+                        <div id="test">
+                            if &self.recipe_name != "" && &self.recipe_instr != ""{
+                                <div>
+                                    <h1>
+                                        { format!{
+                                        "recipe name == {}",
+                                        &self.recipe_name}
+                                        }
+                                    </h1>
+                                    <h1>
+                                        { format! {
+                                        "recipe instructions == {}",
+                                        &self.recipe_instr}
+                                        }
+                                    </h1>
+                                </div>
+                            }
+                        </div>
+                        <div id="display rec">
+                            <button onclick={ctx.link().callback(|_| Msg::GetRec)}>
+                                {"get rec"}
+                            </button>
+                        </div>
+                        // rec blocks
+                        <div>
+                            <h1>{data["ingredients"].clone()}</h1>
+                            <h1>{data["instructions"].clone()}</h1>
+                        </div>
+                    </div>
             },
+
             FetchState::Failed(err) => html!{ err },
+
         }
     }
 }

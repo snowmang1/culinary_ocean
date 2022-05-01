@@ -55,6 +55,8 @@ pub async fn fetch_rec(url: String) -> Result<HashMap<String, String>, FetchErro
 
     let mut map: HashMap<String, String> = Default::default();
     map.insert("user_email".to_string(), v[0].user_email.clone());
+    map.insert("instructions".to_string(), v[0].instructions.clone());
+    map.insert("ingredients".to_string(), v[0].ingredients.clone());
     Ok(map)
 }
 
