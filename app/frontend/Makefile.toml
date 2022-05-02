@@ -1,16 +1,14 @@
-
 [tasks.trunk]
 script = [
 	"trunk build"
 ]
 dependencies = ["test"]
 
-[tasks.run]
+[task.run]
 script = [
 	"trunk build"
 ]
 dependencies = ["test"]
-
 
 [tasks.test]
 command = "cargo"

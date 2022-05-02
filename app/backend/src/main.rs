@@ -88,67 +88,7 @@ async fn main() -> std::io::Result<()> {
             .service(Files::new("/", "./static").index_file("index.html"))
             .wrap(Logger::default())
     })
-    .bind(("127.0.0.1", 8080))?
+    .bind(("0.0.0.0", 8080))?
     .run()
     .await
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-    use actix_web::test;
-
-    // do to concurency issues only one test can run on
-    // any given cargo test instance
-
-    #[actix_web::test]
-    async fn email_query_test() {
-        std::env::set_var("RUST_LOG", "actix_web=debug");
-        dotenv::dotenv().ok();
-
-        let connspec = std::env::var("DATABASE_URL").expect("DATABASE_URL");
-        let manager = ConnectionManager::<SqliteConnection>::new(connspec);
-        let pool = r2d2::Pool::builder()
-            .build(manager)
-            .expect("Failed to create pool.");
-
-        let mut app = test::init_service(
-            App::new()
-                .app_data(web::Data::new(pool.clone()))
-                .wrap(middleware::Logger::default())
-                .service(get_user_email)
-                .service(add_user),
-        )
-        .await;
-
-        // Insert a user
-        let req = test::TestRequest::post()
-            .uri("/user")
-            .set_json(&models::NewUser {
-                user_email: String::from("test@mail.com"),
-                password: String::from("test"),
-                instructions: String::from("please test"),
-                ingredients: String::from("test pear"),
-            })
-            .to_request();
-
-        let resp: models::User = test::call_and_read_body_json(&mut app, req).await;
-
-        assert_eq!(resp.user_email, "test@mail.com");
-
-        // Get a user
-        let req = test::TestRequest::get()
-            .uri(&format!("/user/{}", resp.user_email))
-            .to_request();
-
-        let resp: models::User = test::call_and_read_body_json(&mut app, req).await;
-
-        assert_eq!(resp.user_email, "test@mail.com");
-
-        // Delete new user from table
-        use crate::schema::users::dsl::*;
-        diesel::delete(users.filter(user_email.eq(resp.user_email)))
-            .execute(&pool.get().expect("couldn't get db connection from pool"))
-            .expect("couldn't delete test user from table");
-    }
 }

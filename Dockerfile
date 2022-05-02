@@ -1,22 +1,13 @@
-# rust official image for rust 1.59.0
-FROM rust:1.59 as builder
-
-# create working dir
-RUN mkdir culinary_ocean
-WORKDIR /culinary_ocean
+# rust official image for rust 1.60.0
+FROM rust:1.60 as builder
 
 # use ADD for entire dir
-COPY ./ ./app
+RUN mkdir backend
+COPY ./app/backend ./backend
+WORKDIR backend
 
-# needed for custom build scripts
-RUN cargo install cargo-make
+RUN cargo build
 
-# slim build of rust to just run the server
-FROM rust:1.59-slim as server
+EXPOSE 8080
 
-# copy only backend from builder
-RUN cargo new backend
-COPY --from=builder ./backend/* ./backend
-
-# simple run
 CMD ["cargo", "run"]
