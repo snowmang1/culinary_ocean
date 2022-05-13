@@ -1,5 +1,11 @@
 # Culinary Ocean
 
+## Google cloud url
+- http://34.125.60.138:80/
+- note: this url will take you to the hosted website, however
+there is an error in the way that actix is handling 404's on
+the cloud. This error is causing the website to be completely blank and unusable.
+
 ## Core attributes
 - recipe database, cookbook social network.
 - individual accounts for each person.
