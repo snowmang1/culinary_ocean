@@ -11,6 +11,4 @@
 /app/target
 /app/dist
 /dist
-*.json
-*.wasm
 *target*
