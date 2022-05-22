@@ -7,10 +7,10 @@ there is an error in the way that actix is handling 404's on
 the cloud. This error is causing the website to be completely blank and unusable.
 
 ## To view website locally
-- pull the github branch trunk
-`git pull git@github.com:snowmang1/culinary_ocean.git`
-- from the parent dir of culinary ocean build and run the docker instance with docker compose
-`docker-compose build && docker-compose up`
+- pull the github branch trunk \\
+`git pull git@github.com:snowmang1/culinary_ocean.git` \\
+- from the parent dir of culinary ocean build and run the docker instance with docker compose \\
+`docker-compose build && docker-compose up` \\
 - the compiled wasm is included
 - the website can now be viewed from http://localhost:8080
 
