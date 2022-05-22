@@ -7,7 +7,6 @@
 
 /app/backend/target
 /app/frontend/target
-/app/backend/static
 /app/target
 /app/dist
 /dist
